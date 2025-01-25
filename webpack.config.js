@@ -12,6 +12,11 @@ module.exports = {
     // webpack 默认只处理js、jsx等js代码
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
+  externals: {
+    // 打包过程遇到以下依赖导入，不会打包对应库代码，而是调用window上的React和ReactDOM
+    react: 'React',
+    'react-dom': 'ReactDOM',
+  },
   module: {
     rules: [
       {
