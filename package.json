@@ -4,7 +4,35 @@
   "description": "",
   "main": "src/index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "npx eslint src/**",
+    "prettier": "npx prettier --write ./src",
+    "prepare": "husky",
+    "prepack": "npmignore --auto"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.3.0",
+    "npmignore": "^0.3.1",
+    "prettier": "3.4.2"
+  },
+  "lint-staged": {
+    "src/**/*.{tsx,js}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "publishConfig": {
+    "ignore": [
+      "eslint.config.js",
+      ".eslintignore",
+      ".prettierrc",
+      ".prettierignore",
+      ".gitignore",
+      ".husky"
+    ]
   },
   "repository": {
     "type": "git",
@@ -15,5 +43,8 @@
   "bugs": {
     "url": "https://github.com/AKLelouch/x-components/issues"
   },
-  "homepage": "https://github.com/AKLelouch/x-components#readme"
+  "homepage": "https://github.com/AKLelouch/x-components#readme",
+  "dependencies": {
+    "webpack-cli": "^6.0.1"
+  }
 }
