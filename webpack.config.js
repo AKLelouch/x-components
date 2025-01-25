@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     filename: 'x-components.umd.js', // 打包后的文件名
     path: path.resolve(__dirname, 'dist'), // 打包后的文件目录：根目录/dist/
