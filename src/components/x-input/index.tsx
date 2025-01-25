@@ -4,7 +4,7 @@ import { default as AntDInput, InputProps as AntDInputProps } from 'antd/es/inpu
 interface InputProps extends AntDInputProps {}
 
 const Input: React.FC<InputProps> = props => {
-  const { children, ...rest } = props;
+  const { ...rest } = props;
 
   return <AntDInput {...rest}></AntDInput>;
 };
