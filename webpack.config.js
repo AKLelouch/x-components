@@ -12,4 +12,13 @@ module.exports = {
     // webpack 默认只处理js、jsx等js代码
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'babel-loader',
+        exclude: /node_modules/,
+      },
+    ],
+  },
 };
