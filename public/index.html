@@ -14,12 +14,12 @@
     <div id="root"></div>
     <script>
       const onClick = () => {
-        alert('按钮被点击');
+        console.log('按钮被点击');
       };
 
       const rootElement = document.getElementById('root');
       const root = ReactDOM.createRoot(rootElement);
-      const button = React.createElement(xcomponents.Button, { onClick }, '这是一个按钮');
+      const button = React.createElement(xcomponents.Button, { onClick }, 'button');
       root.render(button);
     </script>
   </body>
