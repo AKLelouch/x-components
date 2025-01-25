@@ -5,7 +5,7 @@ module.exports = {
   output: {
     filename: 'x-components.umd.js', // 打包后的文件名
     path: path.resolve(__dirname, 'dist'), // 打包后的文件目录：根目录/dist/
-    library: 'xcomponents', // 导出的UMD js会在window挂rui，即可以访问window.rui
+    library: 'xcomponents', // 导出的UMD js会在window挂xcomponents，即可以访问window.xcomponents
     libraryTarget: 'umd', // 导出库为UMD形式
   },
   resolve: {
