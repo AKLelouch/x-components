@@ -1,5 +1,7 @@
 const path = require('path');
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 module.exports = {
   entry: './src/index.ts',
   output: {
@@ -24,6 +26,15 @@ module.exports = {
         use: 'babel-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+      },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'x-components.umd.css',
+    }),
+  ],
 };
