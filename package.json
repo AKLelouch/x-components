@@ -55,5 +55,11 @@
   "bugs": {
     "url": "https://github.com/AKLelouch/x-components/issues"
   },
-  "homepage": "https://github.com/AKLelouch/x-components#readme"
+  "homepage": "https://github.com/AKLelouch/x-components#readme",
+  "dependencies": {
+    "css-loader": "^7.1.2",
+    "less-loader": "^12.2.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "style-loader": "^4.0.0"
+  }
 }
